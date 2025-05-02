@@ -1,3 +1,39 @@
+## Assignment 2 - Pokémon Explorer
+
+### Approach
+For this assignment, I enhanced the Pokémon Explorer application by adding several advanced features:
+
+- **Pagination**: I implemented pagination with configurable items per page (10, 20, 50). This was done by managing the page number and items per page through state and calculating the appropriate items to display on each page.
+  
+- **Sorting**: Sorting was added by allowing users to sort Pokémon by ID, name, and alphabetically. I used JavaScript’s `sort()` function to reorder the data based on the selected sorting criteria.
+
+- **Filtering**: Filtering by multiple Pokémon types was implemented by allowing users to select multiple types and dynamically filter the list based on their selections. This was handled through React state and the `filter()` function.
+
+- **Detailed View**: Each Pokémon has a detailed view showing all stats, abilities, moves, and its evolution chain. React Router was used to implement routing between the list and detailed views.
+
+- **Favorites System**: I added a favorites system where users can mark Pokémon as favorites, which persist even after page refresh using `localStorage`.
+
+- **Comparison Tool**: A comparison tool was added to allow users to compare the stats of two Pokémon side by side.
+
+- **Random Pokémon**: A button was added to display a random Pokémon from the list.
+
+### Challenges Faced
+During the development of this application, I encountered a few challenges:
+
+- **Handling Performance Optimizations**: Some performance issues arose when dealing with large datasets (e.g., sorting and filtering). To resolve this, I used `useMemo` and `useCallback` to optimize unnecessary re-renders of components.
+
+- **Managing State Across Multiple Components**: Managing shared state across multiple components (like sorting, filtering, and pagination) was tricky. I resolved this by using the React Context API to pass state down to nested components without prop-drilling.
+
+- **Ensuring Persistent Favorites**: Persisting the favorite Pokémon across page refreshes using `localStorage` was an interesting challenge, but I overcame it by writing custom hooks to interact with `localStorage`.
+
+### Tools/Technologies Used
+- **React**: The main framework used for building the application.
+- **React Router**: For navigation between the list view and detailed view.
+- **React Context API**: For managing state across multiple components.
+- **localStorage**: To persist the favorites even after the page refreshes.
+- **Custom Hooks**: For reusable logic, such as fetching data and managing favorites.
+- **Vercel**: For deploying the application.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
